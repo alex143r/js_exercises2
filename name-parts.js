@@ -21,11 +21,11 @@ console.log(first);
 console.log(middle);
 console.log(last);
 */
-let fullname;
-getNameParts(fullname);
+let fullname = "Alexander Obel Mac Tyllesen";
+
+const getName = getNameParts(fullname);
 
 function getNameParts(fullname) {
-    fullname = "Alexander Obel Mac Tyllesen";
 
     const indexSpace1 = fullname.indexOf(" ");
     const firstName = fullname.substring(0, indexSpace1);
@@ -40,3 +40,4 @@ function getNameParts(fullname) {
         lastName
     });
 }
+console.log(getName);

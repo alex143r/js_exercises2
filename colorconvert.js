@@ -28,6 +28,21 @@ function rgbToHex(rgb) {
     console.log(hex);
 }
 
-/* 
-#0c0211
-*/
+let css = "rgb(192,13,1)";
+cssToRGB(css);
+
+function cssToRGB(css) {
+    let firstParenthesis = css.indexOf("(");
+    let lastParenthesis = css.indexOf(")");
+    let firstComma = css.indexOf(",");
+    let lastComma = css.lastIndexOf(",");
+
+    let r = parseInt(css.substring(firstParenthesis + 1, firstComma));
+    let g = parseInt(css.substring(firstComma + 1, lastComma));
+    let b = parseInt(css.substring(lastComma + 1, lastParenthesis));
+    console.log({
+        r,
+        g,
+        b
+    });
+}

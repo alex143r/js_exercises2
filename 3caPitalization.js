@@ -1,5 +1,5 @@
 "use strict";
-let name;
+let name = "peTEr";
 /*
 const lowercase = name.toLowerCase();
 
@@ -11,11 +11,11 @@ const lastLetters = lowercase.substring(3, 5);
 
 console.log(firstLetters + thirdCap + lastLetters);
 */
-capitalize(name);
+const cap = capitalize(name);
 
 function capitalize(name) {
-    name = "aLeXaNDer";
     name = name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
     console.log(name);
 
 }
+console.log(cap);

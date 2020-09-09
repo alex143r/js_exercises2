@@ -23,37 +23,48 @@ const lastName = firstCap3 + restOfLastName
 
 console.log(firstName + " " + middleName + " " + lastName);
 */
-let name;
+let fullname = ("Harry", "Potter", "James");
+const getName = getNameParts(fullname);
 
-function fullName(lastName, firstName, middleName) {
-    if (middleName === undefined) {
-        fullName = firstName + " " + lastName;
+function fullName(fullname, lastName, firstName, middleName) {
 
+    if (middleName === " ") {
+        fullname = firstName + " " + lastName;
+        fullname = fullname.trim();
+        console.log("yee");
     } else {
-        fullName = firstName + " " + middleName + " " + lastName;
+        fullname = firstName + " " + middleName + " " + lastName.trim();
+        fullname = fullname.trim();
 
     }
-    console.log(fullName);
+    console.log(fullname);
 
 }
 
-getNameParts(name);
+function getNameParts(fullname) {
+    console.log("1" + fullname);
+    const firstName = fullname.split(',')[-1];
+    const middleName = fullname.split(',')[0];
+    const lastName = fullname.split(',')[2];
 
-function getNameParts(name) {
-    name = "Alexander Obel Mac Tyllesen";
 
-    const indexSpace1 = name.indexOf(" ");
-    const firstName = name.substring(0, indexSpace1);
 
-    const indexSpace2 = name.lastIndexOf(" ");
-    const middleName = name.substring(indexSpace1 + 1, indexSpace2);
 
-    const lastName = name.substring(indexSpace2 + 1);
+    /*fullname = fullname.toString();
+    console.log("bib" + fullname);
+
+    const indexSpace1 = fullname.indexOf(" ");
+    const firstName = fullname.substring(0, indexSpace1);
+    console.log(firstName);
+
+    const indexSpace2 = fullname.lastIndexOf(" ");
+    let middleName = fullname.substring(indexSpace1 + 1, indexSpace2);
+
+    const lastName = fullname.substring(indexSpace2 + 1);*/
     console.log({
         firstName,
         middleName,
         lastName
     });
-
-    fullName(lastName, firstName, middleName);
+    fullName(fullname, lastName, firstName, middleName);
 }
